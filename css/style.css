@@ -39,8 +39,7 @@ p {
 .article-container {
      background-color: white;
      padding: 20px;
-     margin-top: 15px;
-   
+     margin-top: 15px;  
 }
 
 input {
@@ -60,11 +59,4 @@ button {
     margin-top: 10px;
     cursor: pointer;
     border-radius: .2rem;
-}
-
-.message.warning  {
-    background-color: red;
-    padding: 10px;
-    color: white;
-
 }
