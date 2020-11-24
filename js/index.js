@@ -15,7 +15,19 @@ const articlesUrl = url + "articles";
         const response = await fetch(articlesUrl);
         const json = await response.json();
 
-        console.log(json)
+        // Create HTML for each item and display at least 3 properties for each.
+        container.innerHTML = ""; 
+
+        json.forEach(function (article)  {
+            container.innerHTML += `<a class="article" href="index.html?id=${article.id}">
+                                        <h1>${article.title}</h1>
+                                        <h4>${article.author}</h4>
+                                        <p>${article.summary}</p>
+                                        </a>`;
+
+        
+            
+        });
 
     } catch(error) {
 
