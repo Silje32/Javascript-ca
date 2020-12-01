@@ -18,11 +18,11 @@ h1 {
 }
 
 h2 {
-    color:magenta;
+    color: darkred;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 10px;
-
+    font-family: "Lato", sans-serif;
 }
 
 h4 {
@@ -34,6 +34,7 @@ p {
     color: black;
     text-decoration: none;
     margin-bottom: 100px;
+    font-family: "Montserrat", serif;
 }
 
 .article-container {
@@ -60,3 +61,16 @@ button {
     cursor: pointer;
     border-radius: .2rem;
 }
+
+.article i.far {
+    color: orchid;
+}
+
+.article i.fa {
+    color: orchid;
+}
+
+a {
+    text-decoration: none;
+}
+
