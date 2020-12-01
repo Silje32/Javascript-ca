@@ -1,19 +1,16 @@
 import { url } from "./api.js"; 
 import searchArticle from "./searchArticle.js";
 import { saveToStorage, getFromStorage } from "./localStorage.js";
-import { clearButton } from "./clearButton.js";
-
-
-searchArticle();
-saveToStorage("list");
-clearList();
+import clearButton from "./clearButton.js";
 
 
 const getArticle = getFromStorage;
 
-const articlesUrl = url + "articles";
+
 
 // Make a GET request to fetch a list of resources from your API.
+
+const articlesUrl = url + "articles";
 
 (async function list()  {
 
@@ -23,6 +20,7 @@ const articlesUrl = url + "articles";
 
         const response = await fetch(articlesUrl);
         const json = await response.json();
+        console.log(json);
 
 
         // Create HTML for each item and display at least 3 properties for each.
@@ -30,14 +28,18 @@ const articlesUrl = url + "articles";
 
         json.forEach(function (article)  {
             container.innerHTML += `<a class="article" href="index.html?id=${article.id}  <i class="far fa-heart" data-id="${article.id}"></i>
-                                        <h2>${article.title}</h2>  <i class="far fa-heart" data-id="${article.id}"></i>
-                                        <h4>${article.author}</h4>
-                                        <p>${article.summary}</p> 
-                                        </a>`;
+                                          <h2>${article.title}</h2>  <i class="far fa-heart" data-id="${article.id}"></i>
+                                          <h4>${article.author}</h4>
+                                          <p>${article.summary}</p> 
+                                    </a>`;
   
         });
 
+        searchArticle(list);
+        saveToStorage(list);
+        clearButton();
         console.log();
+
 
     } catch(error) {
 
@@ -45,6 +47,7 @@ const articlesUrl = url + "articles";
     }
      
 })();   
+
 
 /*Each item should also display a button or icon. Clicking on this button should toggle the item in and 
    out of an array stored in localStorage */
