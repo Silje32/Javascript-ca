@@ -19,7 +19,7 @@ JavaScript
 ### Getting Started :
 Installing:
 01. Clone the repo
-git clone https://github.com/Silje32/new-javascript-semester-project.git
+git clone https://github.com/Silje32/Javascript-ca.git
 
 02. Install the dependencies
 npm install.
