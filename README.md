@@ -1,4 +1,4 @@
-SEMESTER PROJECT 2
+JAVASCRIPT FRAMEWORKS CA
 
 # Description :
 You are tasked with build out the following pages for an eCom store:
